@@ -3,3 +3,13 @@ To create a react Js app, We use Vite
 npm create vit@latest
 
 That will ask for few questions, Answer them and you will get the react Js application created
+
+Assignment-1 
+------------------------------------------------------------------------
+Create a Header Component
+Create a MainContent Component
+Create a Footer Component
+
+Render all the 3 of them in the App.Jsx page
+------------------------------------------------------------------------
+
