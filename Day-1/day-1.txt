@@ -1,0 +1,5 @@
+To create a react Js app, We use Vite
+
+npm create vit@latest
+
+That will ask for few questions, Answer them and you will get the react Js application created
