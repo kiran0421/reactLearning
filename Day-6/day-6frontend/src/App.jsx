@@ -1,7 +1,9 @@
 import "./App.css";
-import { useReducer } from "react";
+import { useContext, useReducer } from "react";
 import CounterReducer from "./components/CounterReducer";
+import { useCount } from "./components/ProductCountProvider";
 function App() {
+  const { count } = useCount();
   const initalState = { userName: "Guest", isLoggedIn: false };
   const reducer = (state, action) => {
     switch (action.type) {
@@ -30,6 +32,8 @@ function App() {
         )}
       </div>
       <CounterReducer />
+
+      <h2>Global Product Count: {count}</h2>
     </>
   );
 }
