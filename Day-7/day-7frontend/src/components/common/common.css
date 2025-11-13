@@ -1,0 +1,83 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  width: auto;
+  height: 100%;
+  padding: 0 2rem;
+}
+.logo {
+  height: 4em;
+  padding: 0.25em;
+  will-change: filter;
+  transition: filter 300ms;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 2px solid #57c785;
+  outline: 2px solid #00f;
+  outline-offset: 2px;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  width: auto;
+  height: 100%;
+  padding: 0 2rem;
+  gap: 2rem;
+  color: #fff;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu-items a:hover {
+  border-bottom: 2px solid White;
+}
+.logged-in-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  width: auto;
+  height: 100%;
+  padding: 0 2rem;
+  gap: 2rem;
+  color: #fff;
+}
+
+.logged-in-user span {
+  text-decoration: none;
+  color: #fff;
+}
+
+.logged-in-user button {
+  text-decoration: none;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #fff;
+  border-bottom: 2px solid White;
+}
+.project-title {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
