@@ -33,6 +33,8 @@ const getAllPosts = (req, res) => {
 // Controller to create a new post
 const createPost = (req, res) => {
   try {
+    let newId = posts.length > 0 ? posts[posts.length - 1].id + 1 : 1;
+
     const { title, content } = req.body;
 
     if (!title || !content) {
@@ -43,7 +45,7 @@ const createPost = (req, res) => {
     }
 
     const newPost = {
-      id: posts.length + 1,
+      id: newId,
       title,
       content,
       createdAt: new Date().toISOString(),
@@ -121,11 +123,28 @@ const editPostById = (req, res) => {
     });
   }
 };
+const deletePostById = (req, res) => {
+  try {
+    const { id } = req.params;
+    posts = posts.filter((p) => p.id !== parseInt(id));
+    res.status(200).json({
+      success: true,
+      data: {},
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: "Server Error",
+      error: error.message,
+    });
+  }
+};
 
 export {
   getAllPosts,
   getPostById,
   createPost,
   editPostById,
+  deletePostById,
   posts, // Export the array if you need to access it elsewhere
 };
